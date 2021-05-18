@@ -1,0 +1,1 @@
+<view class="home_container data-v-1beee158"><view data-event-opts="{{[['tap',[['handleTag',['$event']]]]]}}" class="venue_tag data-v-1beee158" bindtap="__e"><image class="sport_image data-v-1beee158" src="../../static/icons/nav/nav.svg"></image><text class="data-v-1beee158">场馆导航</text></view></view>

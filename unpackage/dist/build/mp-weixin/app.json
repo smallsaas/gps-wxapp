@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/venueNav/index",
+    "pages/venueList/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "综合执法",
+    "navigationBarBackgroundColor": "#1A5EB5",
+    "backgroundColor": "#F8F8F8"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "导航"
+    }
+  },
+  "usingComponents": {}
+}
