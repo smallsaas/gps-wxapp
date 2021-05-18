@@ -20,14 +20,15 @@
   code: 200,
   data: {
     list: [{
-            title: '国家体育场馆',
-            icon: '',
-            bgColor: '#FFFFFF',
-       }],
-        page: 1,
-        totalpages: 1,
-        total: 1
-    }]
+        id: 'xxx',
+        title: '国家体育场馆',
+        icon: '',
+        bgColor: '#FFFFFF'
+    }],
+    page: 1,
+    totalpages: 1,
+    total: 1
+  }
 }         
 ```
 
@@ -55,18 +56,19 @@
   code: 200,
   data: {
     list: [{
-            type: '体育场馆',
-            latitude: 39.909652,
-            longitude: 116.404177,
-            address: '北京市天安门广场',
-            title: '国家体育场馆',
-            image: '',
-            status: '未检查',
-            phone: '95000'
-       }],
-        page: 1,
-        totalpages: 1,
-        total: 1
-    }]
-}         
+        id: 'xxx',
+        type: '体育场馆',
+        latitude: 39.909652,
+        longitude: 116.404177,
+        address: '北京市天安门广场',
+        title: '国家体育场馆',
+        image: '',
+        status: '未检查',
+        phone: '95000'
+    }],
+    page: 1,
+    totalpages: 1,
+    total: 1
+  }
+}        
 ```
