@@ -65,7 +65,7 @@
     import msTab from '../../components/ms-tabs/ms-tabs.vue'
 	import { getAddress } from '@/utils/tools.js'
     
-    import { navTypeList } from '../testData/nav.js'
+    import { navList, navTypeList } from '../../assets/mockData.js'
     
 	export default {
 		components: {
@@ -112,12 +112,17 @@
             
 			async fetchList (data) {
                 uni.showLoading({ title: 'loading...', mask:true })
+                
+                // ** 测试数据
+                // const res = navList
+                // **
+                
 				const res = await getNavList({ 
                     size: 10, 
                     page: this.listCurrentPage,
                     ...this.currentType !== '全部' ? { type: this.currentType } : {}
                  })
-                uni.hideLoading()				
+                uni.hideLoading()		
 				this.list = this.list.concat([..._.get(res, 'data.list', [])])
                 
                 //** 测试数据

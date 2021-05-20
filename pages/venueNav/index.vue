@@ -74,7 +74,7 @@
 	import _ from 'lodash'
 	import { getAddress } from '@/utils/tools.js'
 	
-	import { navData, navTypeList } from '../testData/nav.js'
+	import { navList, navTypeList } from '../../assets/mockData.js'
 	
 	const customCallout = {
 		anchorX: 0,
@@ -143,7 +143,7 @@
 				const res = await getNavList()
                 
                 // ** 试数据
-                // const res = navData
+                // const res = navList
                 // **
                 
 				if (res.code === 200) {

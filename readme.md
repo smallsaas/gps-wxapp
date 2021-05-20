@@ -72,3 +72,64 @@
   }
 }        
 ```
+
+## 导航模块测试数据说明
+<strong>注：<strong> 现在接的是正常请求数据。
+
+若要使用测试数据，按下面操作。
+
+1. 在文件中引入mock数据
+
+```js
+import { navList, navTypeList } from '../../assets/mockData.js'
+```
+
+2. 在请求导航类型、导航列表接口替换即可。
+
+```js
+// 获取类别数据
+async fetchTypeList () {
+    // const res = await getNavTypeList()  // 使用测试数据时隐藏
+                
+    // ** 测试数据
+    const res = navTypeList    //使用测试数据时加上此处
+    // **
+
+    if (res.code === 200) {
+        const list = _.cloneDeep(_.get(res, 'data.list', []))
+        list.unshift({ title: '全部'})
+        this.typeList = [...list]
+         }
+    }
+```
+
+```js
+async fetchList () {
+	//const res = await getNavList()    // 使用测试数据时隐藏
+                
+    // ** 试数据
+    const res = navList  //使用测试数据时加上此处
+    // **
+                
+	if (res.code === 200) {
+		this.list = _.get(res, 'data.list', [])
+        const markersList = []
+		this.list.map((item, index) => {
+		markersList.push({
+			id: index + 1,
+			latitude: item.latitude,
+			longitude: item.longitude,
+			title: item.title,
+			customCallout: {...customCallout},
+                bgColor: this.getCustomCalloutBgColor(item.type),
+                type: item.type,
+                address: item.address
+                })
+			})
+            this.markers = [...markersList];
+            this.allmarkers = [...markersList]
+    }
+},
+```
+
+<strong>注：<strong> 导航地图页及导航列表的测试数据修改是一样的方法，按上图修改即可。
